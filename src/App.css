@@ -1,38 +1,29 @@
-.App {
-  text-align: center;
+
+.btn{
+  @apply border-2 py-1 px-2 rounded-full transition-all duration-300  m-1 font-bold
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.btn-a{
+  @apply text-rose-600 border-rose-600 hover:bg-rose-600 hover:text-white
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.btn-b{
+  @apply text-emerald-500 hover:bg-emerald-500 border-emerald-500 hover:text-white
+}
+.btn-c{
+  @apply text-blue-600 hover:bg-blue-600 border-blue-600 hover:text-white
+}
+.btn-d{
+  @apply text-white hover:bg-white  border-white w-full hover:text-emerald-500
+}
+.btn-e{
+  @apply text-white hover:bg-white  border-white w-full hover:text-violet-700
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.input-field{
+  @apply border-2 border-gray-200 focus:outline-blue-600 block mx-auto container p-3 rounded-md
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.input-field-b{
+  @apply border-2 border-gray-200 focus:shadow-white shadow-lg focus:outline-none block py-2 px-5 rounded-full container
 }

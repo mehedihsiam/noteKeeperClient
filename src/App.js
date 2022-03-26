@@ -1,24 +1,28 @@
-import logo from './logo.svg';
 import './App.css';
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from "react-router-dom";
+import AllNotes from './Pages/AllNotes/AllNotes';
+import SingleNoteView from './Pages/AllNotes/SingleNoteView/SingleNoteView';
+import EditeNote from './Pages/AllNotes/EditNote/EditeNote';
+import Login from './Pages/Login/Login';
+import Register from './Pages/Register/Register';
+import AddNote from './Pages/AddNote/AddNote';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<AllNotes />} />
+        <Route path='/addNote' element={<AddNote />} />
+        <Route path='/login' element={<Login />} />
+        <Route path='/register' element={<Register />} />
+        <Route path='/edit/:id' element={<EditeNote />} />
+        <Route path='/notes/:id' element={<SingleNoteView />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
